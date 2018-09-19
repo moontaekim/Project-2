@@ -19,3 +19,13 @@ const GearSchema = new Schema({
     brand: String,
     description: String
 })
+
+const GuitarModel = mongoose.model('Guitarist', GuitaristSchema)
+const SongModel = mongoose.model('Song', SongSchema)
+const GearModel = mongoose.model('Gear', GearSchema)
+
+module.exports = {
+    Guitarist: GuitarModel,
+    Song: SongModel,
+    Gear: GearModel
+}
