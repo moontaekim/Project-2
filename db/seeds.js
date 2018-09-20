@@ -9,7 +9,7 @@ const Schema = require('./schema')
 
 const { Guitarist, Song, Gear } = Schema
 
-const GearS1 = new Gear({
+const gearS1 = new Gear({
     name: "Distortion",
     brand: "BOSS",
     description: "distortion pedal heard in Bodysnatchers"
@@ -19,7 +19,7 @@ const jS1 = new Song({
     name: "Bodysnatchers",
     album: "In Rainbows",
     length: "4:02",
-    gear: [GearS1]
+    gear: [gearS1]
 })
 
 const guitaristOne = new Guitarist({
