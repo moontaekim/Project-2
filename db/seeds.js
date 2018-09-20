@@ -2,6 +2,7 @@
 require('dotenv').config()
 
 const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost/gear-tracker', { useNewUrlParser: true})
 //what is going on here?
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true})
 
@@ -29,3 +30,13 @@ const guitaristOne = new Guitarist({
     img: "IMG WILL GO HERE",
     song: [jS1]
 })
+
+Guitarist.deleteMany()
+    .then(() => {
+        return Guitarist.insertMany([guitaristOne])
+    })
+    .then(data => {
+        console.log("done seeding")
+        mongoose.connection.close()
+    })
+

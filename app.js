@@ -6,10 +6,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser')
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }); 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI); 
+
 var app = express();
 
 // view engine setup
