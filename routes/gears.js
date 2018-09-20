@@ -4,8 +4,8 @@ const { Gear } = require('../db/schema')
 
 router.get('/', (req,res) => {
     Gear.find()
-    .then(() => {
-        res.send('hello')
+    .then((gears) => {
+        res.render('gears/index', {gears})
     })
 })
 
