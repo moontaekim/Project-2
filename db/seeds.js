@@ -10,45 +10,59 @@ const Schema = require('./schema')
 
 const { Guitarist, Song, Gear } = Schema
 //gears Johnny Greenwood
-const gearJGS1 = new Gear({
-    name: "Distortion",
+const gearJGG1 = new Gear({
+    name: "BD1",
     brand: "BOSS",
-    description: "distortion pedal heard in Bodysnatchers"
+    description: "distortion pedal"
 })
+
+const gearJGG2 = new Gear({
+    name: "Hall of Fame",
+    brand: "TC electronic",
+    description: "Reverb pedal"
+})
+
 //gears Jack White
-const gearJWS1 = new Gear({
+const gearJWG1 = new Gear({
     name: "Bumble Buzz",
     brand: "Union Tube & Third Man Records",
-    description: "Fuzz pedal heard in Bumble Buzz"
+    description: "Fuzz pedal"
 })
+
+const gearJWG2 = new Gear({
+    name: "Whammy Pitch-Shifting",
+    brand: "DigiTech",
+    description: "pitch shifter"
+})
+
 
 //songs for Johnny Greenwood
 const jgS1 = new Song({
     name: "Bodysnatchers",
     album: "In Rainbows",
     length: "4:02",
-    gears: [gearJGS1]
+    gears: [gearJGG1, gearJGG2]
 })
 
 const jgS2 = new Song({
     name: "My Iron Lung",
     album: "The Bends",
     length: "4:36",
-    gears: [gearJGS1]
+    gears: [gearJGG1, gearJGG2]
 })
 //songs for Jack White
 const jwS1 = new Song({
     name: "Sisteen Saltines",
     album: "Blunderbuss",
     length: "2:37",
-    gears: [gearJWS1]
+    gears: [gearJWG1, gearJWG2]
 })
 
 const jwS2 = new Song({
     name: "Over and Over and Over",
     album: "Boarding House Reach",
     length: "3:36",
-    gears: [gearJWS1]
+    gears: [gearJWG1, gearJWG2]
 })
 
 //guitarists
