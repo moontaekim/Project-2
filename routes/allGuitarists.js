@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { Guitarist, Song } = require('../db/schema')
+const { Guitarist } = require('../db/schema')
 
 /* GET home page. */
 router.get('/', (req, res) => {
@@ -12,10 +12,10 @@ router.get('/', (req, res) => {
 
 router.get('/:guitaristId', (req, res) => {
   Guitarist.findById(req.params.guitaristId)
-  .then((guitarists) => {
+  .then((guitarist) => {
     res.render('guitarists/show', {
-      guitarists,
-      songs: guitarists.song
+      guitarist,
+      song: guitarist.songs
     })
   })
 })

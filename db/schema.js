@@ -12,7 +12,7 @@ const SongSchema = new Schema({
     name: String,
     album: String,
     length: String,
-    gear: [GearSchema]
+    gears: [GearSchema]
 })
 
 const GuitaristSchema = new Schema({
@@ -20,7 +20,7 @@ const GuitaristSchema = new Schema({
     band: String,
     bio: String,
     img: String,
-    song: [SongSchema]
+    songs: [SongSchema]
 
 })
 
