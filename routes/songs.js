@@ -7,7 +7,7 @@ router.get('/:id', (req, res) => {
     Guitarist.findById(req.params.guitaristId)
     .then(guitarist => {
         const song = guitarist.songs.id(req.params.id)
-        res.render('song/index', {
+        res.render('songs/index', {
             guitarist,
             song,
             gears: song.gears
@@ -20,7 +20,7 @@ router.get('/:songsId/gears/:id', (req, res) => {
     .then((guitarist) => {
         const song = guitarist.songs.id(req.params.songId)
         const gear = song.gears.id(req.params.id)
-        res.render('song/show', {
+        res.render('songs/show', {
             gear
         })
     })
