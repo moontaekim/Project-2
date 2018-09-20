@@ -25,7 +25,7 @@ router.get('/:guitaristId/songs', (req, res) => {
 router.delete('/:guitaristId', (req ,res) => {
   Guitarist.findByIdAndRemove(req.params.guitaristId)
   .then(() => {
-    res.redirect('/') 
+    res.redirect('/guitarists') 
   })
 })
 

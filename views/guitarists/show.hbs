@@ -5,7 +5,7 @@
     <div>Guitarist: {{guitarist.name}}</div>
     <div>Band: {{guitarist.band}}</div>
     <div>Bio: {{guitarist.bio}}</div>
-    <form action="/{{guitarist._id}}?_method=DELETE" method="POST">
+    <form action="/guitarists/{{guitarist._id}}?_method=DELETE" method="POST">
         <input type="submit" value="delete user">
     </form>
 </div>
