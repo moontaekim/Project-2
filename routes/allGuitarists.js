@@ -5,8 +5,8 @@ const { Guitarist } = require('../db/schema')
 /* GET home page. */
 router.get('/', (req, res) => {
   Guitarist.find()
-    .then((guitarists) => {
-      res.render('guitarists/index', {guitarists})
+    .then((guitarist) => {
+      res.render('guitarists/index', {guitarist})
     })
 })
 
@@ -19,5 +19,7 @@ router.get('/:guitaristId', (req, res) => {
     })
   })
 })
+
+
 
 module.exports = router;
