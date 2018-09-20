@@ -1,4 +1,7 @@
 <h1>Gear Tracker</h1>
 <div>
-    {{ guitarists}}
+    {{#each guitarists}}
+    <img src="{{this.img}}">
+    <div>{{this.name}}</div>
+    {{/each}}
 </div>
