@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }); 
 
 var allGuitaristsRouter = require('./routes/allGuitarists');
+var gearsRouter = require('./routes/gears')
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', allGuitaristsRouter);
+app.use('/:guitaristId/:id', gearsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

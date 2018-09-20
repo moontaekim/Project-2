@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res) => {
-  Guitarist.findById(req.params.id)
+router.get('/:guitaristId', (req, res) => {
+  Guitarist.findById(req.params.guitaristId)
   .then((guitarists) => {
     res.render('guitarists/show', {
       guitarists,
