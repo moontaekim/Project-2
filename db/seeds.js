@@ -29,11 +29,25 @@ const jgS1 = new Song({
     length: "4:02",
     gears: [gearJGS1]
 })
+
+const jgS2 = new Song({
+    name: "My Iron Lung",
+    album: "The Bends",
+    length: "4:36",
+    gears: [gearJGS1]
+})
 //songs for Jack White
 const jwS1 = new Song({
     name: "Sisteen Saltines",
     album: "Blunderbuss",
     length: "2:37",
+    gears: [gearJWS1]
+})
+
+const jwS2 = new Song({
+    name: "Over and Over and Over",
+    album: "Boarding House Reach",
+    length: "3:36",
     gears: [gearJWS1]
 })
 
@@ -43,7 +57,7 @@ const guitaristOne = new Guitarist({
     band: "Radiohead",
     bio: "Johnny Greenwood master of effects",
     img: "https://ksassets.timeincuk.net/wp/uploads/sites/55/2017/05/JonnyGreenwoodGettyImages-173087304-1-920x584.jpg",
-    songs: [jgS1]
+    songs: [jgS1, jgS2]
 })
 
 const guitaristTwo = new Guitarist({
@@ -51,7 +65,7 @@ const guitaristTwo = new Guitarist({
     band: "The White Stripes, The Raconteurs, The Dead Weather",
     bio: "Owner of third man records",
     img: "https://thirdmanstore.com/pub/media/catalog/category/Pasted_image_at_2018_02_19_03_47_PM.png",
-    songs: [jwS1]
+    songs: [jwS1, jwS2]
 })
 
 
