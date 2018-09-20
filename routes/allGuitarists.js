@@ -20,6 +20,11 @@ router.get('/:guitaristId', (req, res) => {
   })
 })
 
-
+router.delete('/:guitaristId', (res ,req) => {
+  Guitarist.findByIdAndRemove(req.params.guitaristId)
+  .then(() => {
+    res.redirect('/') 
+  })
+})
 
 module.exports = router;
