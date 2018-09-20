@@ -1,1 +1,15 @@
-<h1>waddup</h1>
+<h1>One Guitarist</h1>
+
+<div>
+    {{#each guitarists}}
+    <img src="{{this.img}}">
+    <div>{{this.name}}</div>
+    <div>{{this.band}}</div>
+    <div>{{this.bio}}</div>
+    {{/each}}
+</div>
+<div>
+    {{#each songs}}
+    <div>{{this.name}}</div>
+    {{/each}}
+</div>
