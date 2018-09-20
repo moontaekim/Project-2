@@ -6,7 +6,7 @@ const { Guitarist } = require('../db/schema')
 router.get('/', (req, res) => {
   Guitarist.find()
     .then((guitarists) => {
-      res.render('index', {guitarists})
+      res.render('allGuitarists', {guitarists})
     })
 })
 
