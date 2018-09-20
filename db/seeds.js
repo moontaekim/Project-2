@@ -8,3 +8,20 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true})
 const Schema = require('./schema')
 
 const { Guitarist, Song, Gear } = Schema
+
+
+
+const jSongOne = new Song({
+    name: "Bodysnatchers",
+    album: "In Rainbows",
+    length: "4:02",
+    gear: []
+})
+
+const guitaristOne = new Guitarist({
+    name: "Johnny Greenwood",
+    band: "Radiohead",
+    bio: "Johnny Greenwood master of effects",
+    img: "IMG WILL GO HERE",
+    song: []
+})
