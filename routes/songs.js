@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router({mergeParams: true});
 const { Guitarist, Song, Gear } = require('../db/schema')
 
-
-router.get('/', (req, res) => {
+//show one song
+router.get('/:id', (req, res) => {
     Guitarist.findById(req.params.guitaristId)
     .then(guitarist => {
-        const song = guitarist.songs.id(req.params.songId)
+        const song = guitarist.songs.id(req.params.id)
         res.render('song/index', {
             guitarist,
             song,
@@ -14,8 +14,8 @@ router.get('/', (req, res) => {
         })
     })
 })
-
-router.get('/:id', (req, res) => {
+//show all gear
+router.get('/:songsId/gears/:id', (req, res) => {
     Guitarist.findById(req.params.guitaristId)
     .then((guitarist) => {
         const song = guitarist.songs.id(req.params.songId)

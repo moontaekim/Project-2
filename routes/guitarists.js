@@ -1,8 +1,9 @@
 var express = require('express');
-var router = express.Router();
+var router = express.Router({mergeParams: true});
 const { Guitarist } = require('../db/schema')
 
 /* GET home page. */
+//show all
 router.get('/', (req, res) => {
   Guitarist.find()
     .then((guitarist) => {
@@ -10,16 +11,17 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:guitaristId', (req, res) => {
+//show one guitarist show all songs
+router.get('/:guitaristId/songs', (req, res) => {
   Guitarist.findById(req.params.guitaristId)
   .then((guitarist) => {
     res.render('guitarists/show', {
       guitarist,
-      song: guitarist.songs
+      songs: guitarist.songs
     })
   })
 })
-
+//delete
 router.delete('/:guitaristId', (req ,res) => {
   Guitarist.findByIdAndRemove(req.params.guitaristId)
   .then(() => {
