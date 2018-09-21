@@ -15,4 +15,18 @@ router.get('/:songId', (req, res) => {
     })
 })
 
+//delete
+router.delete('/:songId', (req, res) => {
+    Guitarist.findById(req.params.guitaristId)
+    .then(guitarist => {
+        const deleteSong = req.params.songId
+        guitarist.songs.remove(deleteSong)
+        return guitarist.save()
+        .then(() => {
+            res.redirect(`/guitarists/${guitarists._id}`)
+        })
+    })
+        
+})
+
 module.exports = router;

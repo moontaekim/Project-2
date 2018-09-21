@@ -15,5 +15,8 @@
     {{#each songs}}
     <div>Song name:{{this.name}}</div>
     <div><a href="/guitarists/{{../guitarist._id}}/songs/{{this._id}}">click</a></div>
+    <form action="/guitarists/{{../guitarist._id}}/songs/{{this._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="delete song">
+    </form>
     {{/each}}
 </div>

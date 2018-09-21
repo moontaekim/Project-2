@@ -8,6 +8,7 @@ router.get('/:id', (req, res) => {
     .then(guitarist => {
             const song = guitarist.songs.id(req.params.songId)
             const gear = song.gears.id(req.params.id)
+
             res.render('gears/show', {
                 gear
             })
