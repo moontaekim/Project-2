@@ -1,6 +1,29 @@
 var express = require('express');
 var router = express.Router({mergeParams: true});
-const { Guitarist, Song, Gear } = require('../db/schema')
+const { Guitarist, Song } = require('../db/schema')
+
+//new
+router.get('/new', (req, res) => {
+    Guitarist.findById(req.params.guitaristId)
+    .then(guitarist => {
+        res.render('songs/new', {
+            guitarist  
+        })
+    })
+})
+
+//create
+router.post('/', (req, res) => {
+    const newSong = new Song(req.body)
+    Guitarist.findById(req.params.guitaristId)
+    .then(guitarist => {
+        guitarist.songs.push(newSong)
+        return guitarist.save()
+    })
+    .then(guitarist => {
+        res.redirect(`/guitarists/${guitarist._id}`)
+    })
+})
 
 //show one song and show all gear
 router.get('/:songId', (req, res) => {
@@ -14,6 +37,18 @@ router.get('/:songId', (req, res) => {
         })
     })
 })
+
+// //update
+// router.put('/:songId', (req, res) => {
+//     Guitarist.findById(req.params.guitaristId)
+//     .then(guitarist => {
+//         guitarist.songs.id(req.params.songId).set(req.body)
+//         return guitarist.save
+//     })
+//     .then(guitarist => {
+//         res.redirect(`/guitarists/${guitarist._id}`)
+//     })
+// })
 
 //delete
 router.delete('/:songId', (req, res) => {
