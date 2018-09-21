@@ -1,13 +1,19 @@
 var express = require('express');
-var router = express.Router({mergeParams: true});
-const { Guitarist } = require('../db/schema')
+var router = express.Router({
+  mergeParams: true
+});
+const {
+  Guitarist
+} = require('../db/schema')
 
 /* GET home page. */
 //show all
 router.get('/', (req, res) => {
   Guitarist.find()
     .then((guitarist) => {
-      res.render('guitarists/index', {guitarist})
+      res.render('guitarists/index', {
+        guitarist
+      })
     })
 })
 
@@ -20,7 +26,9 @@ router.get('/new', (req, res) => {
 router.get('/:guitaristId/edit', (req, res) => {
   Guitarist.findById(req.params.guitaristId)
     .then((guitarist) => {
-      res.render('guitarists/edit', {guitarist})
+      res.render('guitarists/edit', {
+        guitarist
+      })
     })
 })
 
@@ -35,12 +43,12 @@ router.post('/', (req, res) => {
 //show one guitarist show all songs
 router.get('/:guitaristId', (req, res) => {
   Guitarist.findById(req.params.guitaristId)
-  .then((guitarist) => {
-    res.render('guitarists/show', {
-      guitarist,
-      songs: guitarist.songs
+    .then((guitarist) => {
+      res.render('guitarists/show', {
+        guitarist,
+        songs: guitarist.songs
+      })
     })
-  })
 })
 
 //update
@@ -52,11 +60,11 @@ router.put('/:guitaristId', (req, res) => {
 })
 
 //delete
-router.delete('/:guitaristId', (req ,res) => {
+router.delete('/:guitaristId', (req, res) => {
   Guitarist.findByIdAndRemove(req.params.guitaristId)
-  .then(() => {
-    res.redirect('/guitarists') 
-  })
+    .then(() => {
+      res.redirect('/guitarists')
+    })
 })
 
 
