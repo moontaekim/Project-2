@@ -1,0 +1,13 @@
+<h1>Edit {{guitarist.name}}'s info</h1>
+
+<form action="/guitarists/{{guitarist._id}}?_method=PUT" method="POST">
+    <div>Name: <input type="text" name="name" value="{{guitarist.name}}"></div>
+    <div>Band: <input type="text" name="band" value="{{guitarist.band}}"></div>
+    <div>Bio: <input type="text" name="bio" value="{{guitarist.bio}}"></div>
+    <div>Image Url: <input type="text" name="img" value="{{guitarist.img}}"></div>
+    <div><input type='submit' value='Update Guitarist'></div>
+</form>
+
+
+
+
