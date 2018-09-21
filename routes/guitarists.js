@@ -46,8 +46,8 @@ router.get('/:guitaristId/songs', (req, res) => {
 //update
 router.put('/:guitaristId', (req, res) => {
   Guitarist.findByIdAndUpdate(req.params.guitaristId, req.body)
-    .then(() => {
-      res.redirect('/guitarists')
+    .then((guitarists) => {
+      res.redirect(`/guitarists/${guitarists._id}/songs`)
     })
 })
 

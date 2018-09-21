@@ -8,6 +8,7 @@
     <form action="/guitarists/{{guitarist._id}}?_method=DELETE" method="POST">
         <input type="submit" value="delete user">
     </form>
+    <div><a href="/guitarists/{{guitarist._id}}/edit">Edit Guitarist</a></div>
 </div>
 <div>
     {{#each songs}}
