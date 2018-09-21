@@ -4,7 +4,6 @@ var router = express.Router({
 });
 const {
     Guitarist,
-    Song,
     Gear
 } = require('../db/schema')
 
@@ -13,12 +12,25 @@ router.get('/new', (req, res) => {
     Guitarist.findById(req.params.guitaristId)
         .then(guitarist => {
           const song = guitarist.songs.id(req.params.songId)
-            // res.render('gears/new' , {
-            //     guitarist,
-            //     song
-            // })
-            res.send("hello")
+            res.render('gears/new' , {
+                guitarist,
+                song
+            })
         })
+})
+
+//create
+router.post('/', (req, res) => {
+    const newSong = new Gear(req.body)
+    Guitarist.findById(req.params.guitaristId)
+    .then(guitarist => {
+        const song = guitarist.songs.id(req.params.songId)
+        song.gears.push(newSong)
+        return guitarist.save()
+    })
+    .then(guitarist => {
+        res.redirect(`/guitarists/${guitarist._id}/songs/${song._id}`)
+    })
 })
 
 //show gear details

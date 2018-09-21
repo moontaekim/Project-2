@@ -15,9 +15,11 @@
 <div>
     {{#each gears}}
    <div>{{this.name}}</div>
-   <div><a href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gear/{{this._id}}">click</a></div>
-    <form action="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gear/{{this._id}}?_method=DELETE" method="POST">
+   <div><a href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}">click</a></div>
+    <form action="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}?_method=DELETE" method="POST">
         <input type="submit" value="delete gear">
     </form>
     {{/each}}
+    <a href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/gears/new">Add New Gear</a>
+
 </div>

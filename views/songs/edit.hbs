@@ -1,6 +1,6 @@
 <h1>Edit {{song.name}}'s info</h1>
 
-<form action="/guitarists/{{guitarist._id}}/songs?_method=PUT" method="POST">
+<form action="/guitarists/{{guitarist._id}}/songs/{{song._id}}?_method=PUT" method="POST">
     <div>Name: <input type="text" name="name" value="{{song.name}}"></div>
     <div>Album: <input type="text" name="album" value="{{song.album}}"></div>
     <div>Length: <input type="text" name="length" value="{{song.length}}"></div>

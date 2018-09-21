@@ -23,6 +23,7 @@ router.get('/:songId/edit', (req, res) => {
         .then((guitarist) => {
             const song = guitarist.songs.id(req.params.songId)
             res.render('songs/edit', {
+                guitarist,
                 song
             })
         })
@@ -54,17 +55,20 @@ router.get('/:songId', (req, res) => {
         })
 })
 
-// //update
-// router.put('/:songId', (req, res) => {
-//     Guitarist.findById(req.params.guitaristId)
-//     .then(guitarist => {
-//         guitarist.songs.id(req.params.songId).set(req.body)
-//         return guitarist.save
-//     })
-//     .then(guitarist => {
-//         res.redirect(`/guitarists/${guitarist._id}`)
-//     })
-// })
+//update
+router.put('/:songId', (req, res) => {
+    Guitarist.findById(req.params.guitaristId)
+    .then(guitarist => {
+        const song = guitarist.songs.id(req.params.songId)
+        song.name = req.body.name
+        song.album = req.body.album
+        song.length = req.body.length
+        return guitarist.save()
+    })
+    .then(guitarist => {
+        res.redirect(`/guitarists/${req.params.guitaristId}/songs/${req.params.songId}`)
+    })
+})
 
 //delete
 router.delete('/:songId', (req, res) => {

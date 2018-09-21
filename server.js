@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/guitarists', guitaristsRouter);
 app.use('/guitarists/:guitaristId/songs', songsRouter);
-app.use('/guitarists/:guitaristId/songs/:songId/gear', gearsRouter)
+app.use('/guitarists/:guitaristId/songs/:songId/gears', gearsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
