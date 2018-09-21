@@ -10,6 +10,7 @@ var methodOverride = require('method-override')
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }); 
 
+var indexRouter = require('./routes/index')
 var guitaristsRouter = require('./routes/guitarists');
 var songsRouter = require('./routes/songs')
 var gearsRouter = require('./routes/gears')
@@ -27,6 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', indexRouter);
 app.use('/guitarists', guitaristsRouter);
 app.use('/guitarists/:guitaristId/songs', songsRouter);
 app.use('/guitarists/:guitaristId/songs/:songId/gear', gearsRouter)
