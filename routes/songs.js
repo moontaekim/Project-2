@@ -12,18 +12,27 @@ router.get('/new', (req, res) => {
     })
 })
 
-//create
-router.post('/', (req, res) => {
-    const newSong = new Song(req.body)
+//edit
+router.get('/:songId/edit', (req, res) => {
     Guitarist.findById(req.params.guitaristId)
-    .then(guitarist => {
-        guitarist.songs.push(newSong)
-        return guitarist.save()
+      .then((guitarist) => {
+        const song = guitarist.songs.id(req.params.songId)
+        res.render('songs/edit', {song})
     })
-    .then(guitarist => {
-        res.redirect(`/guitarists/${guitarist._id}`)
-    })
-})
+  })
+
+// //create
+// router.post('/', (req, res) => {
+//     const newSong = new Song(req.body)
+//     Guitarist.findById(req.params.guitaristId)
+//     .then(guitarist => {
+//         guitarist.songs.push(newSong)
+//         return guitarist.save()
+//     })
+//     .then(guitarist => {
+//         res.redirect(`/guitarists/${guitarist._id}`)
+//     })
+// })
 
 //show one song and show all gear
 router.get('/:songId', (req, res) => {
@@ -54,8 +63,8 @@ router.get('/:songId', (req, res) => {
 router.delete('/:songId', (req, res) => {
     Guitarist.findById(req.params.guitaristId)
     .then(guitarist => {
-        const deleteSong = req.params.songId
-        guitarist.songs.remove(deleteSong)
+        const song = req.params.songId
+        guitarist.songs.remove(song)
         return guitarist.save()
         .then(() => {
             res.redirect(`/guitarists/${guitarist._id}`)

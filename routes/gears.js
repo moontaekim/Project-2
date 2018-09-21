@@ -10,9 +10,25 @@ router.get('/:id', (req, res) => {
             const gear = song.gears.id(req.params.id)
 
             res.render('gears/show', {
-                gear
+                gear,
+                song,
+                guitarist
             })
         })
     })
+
+//delete
+router.delete('/:id', (req, res) => {
+    Guitarist.findById(req.params.guitaristId)
+    .then(guitarist => {
+        const song = guitarist.songs.id(req.params.songId)
+        const gear = song.gears.id(req.params.id)
+        gear.remove()
+        return guitarist.save()
+        .then(() => {
+            res.redirect(`/guitarists/${guitarist._id}/songs/${song._id}`)
+        })
+})
+})
 
 module.exports = router

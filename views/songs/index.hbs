@@ -1,4 +1,5 @@
 <h1>Song detail page</h1>
+<div><a href="/guitarists/{{guitarist._id}}">Go Back</a></div>
 
 <div>
     
@@ -7,11 +8,16 @@
     <div>Length: {{song.length}}</div>  
 
 </div>
+ <div><a href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/edit">Edit Song</a></div>
+
 
 <h1>Gears Used</h1>
 <div>
     {{#each gears}}
    <div>{{this.name}}</div>
    <div><a href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gear/{{this._id}}">click</a></div>
+    <form action="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gear/{{this._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="delete gear">
+    </form>
     {{/each}}
 </div>
