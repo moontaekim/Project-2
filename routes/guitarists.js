@@ -21,12 +21,26 @@ router.get('/:guitaristId/songs', (req, res) => {
     })
   })
 })
+
+//new guitarist
+router.get('/new', (req, res) => {
+  res.render('guitarists/new')
+})
+
 //delete
 router.delete('/:guitaristId', (req ,res) => {
   Guitarist.findByIdAndRemove(req.params.guitaristId)
   .then(() => {
     res.redirect('/guitarists') 
   })
+})
+
+//create
+router.post('/', (req, res) => {
+  Guitarist.create(req.body)
+    .then((guitarist) => {
+      res.redirect(`/guitarists/${guitarist.id}`)
+    })
 })
 
 module.exports = router;
