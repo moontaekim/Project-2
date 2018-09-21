@@ -23,7 +23,7 @@ router.delete('/:songId', (req, res) => {
         guitarist.songs.remove(deleteSong)
         return guitarist.save()
         .then(() => {
-            res.redirect(`/guitarists/${guitarists._id}`)
+            res.redirect(`/guitarists/${guitarist._id}`)
         })
     })
         
