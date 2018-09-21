@@ -1,9 +1,10 @@
 <h1>Song detail page</h1>
 
 <div>
-    {{#each song}}
-    {{this.name}}
-    {{/each}}
+    
+    <div>Name: {{song.name}}</div>
+    <div>Album: {{song.album}}</div>
+    <div>Length: {{song.length}}</div>  
 
 </div>
 
@@ -11,6 +12,6 @@
 <div>
     {{#each gears}}
    <div>{{this.name}}</div>
-   <div><a href="/{{../guitarist._id}}/{{../song._id}}/{{this._id}}">click</a></div>
+   <div><a href="/guitarists/{{../guitarist._id}}/song/{{../song._id}}/gear/{{this._id}}">click</a></div>
     {{/each}}
 </div>

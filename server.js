@@ -10,8 +10,9 @@ var methodOverride = require('method-override')
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }); 
 
-var GuitaristsRouter = require('./routes/guitarists');
+var guitaristsRouter = require('./routes/guitarists');
 var songsRouter = require('./routes/songs')
+var gearsRouter = require('./routes/gears')
 
 var app = express();
 
@@ -26,8 +27,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/guitarists', GuitaristsRouter);
-app.use('/guitarists/:guitaristId/songs', songsRouter)
+app.use('/guitarists', guitaristsRouter);
+app.use('/guitarists/:guitaristId/songs', songsRouter);
+app.use('/guitarists/:guitaristId/songs/:songId/gear', gearsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
