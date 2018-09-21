@@ -21,15 +21,15 @@ router.get('/new', (req, res) => {
 
 //create
 router.post('/', (req, res) => {
-    const newSong = new Gear(req.body)
+    const newGear = new Gear(req.body)
     Guitarist.findById(req.params.guitaristId)
     .then(guitarist => {
         const song = guitarist.songs.id(req.params.songId)
-        song.gears.push(newSong)
+        song.gears.push(newGear)
         return guitarist.save()
     })
     .then(guitarist => {
-        res.redirect(`/guitarists/${guitarist._id}/songs/${song._id}`)
+        res.redirect(`/guitarists/${guitarist._id}/songs/${req.params.songId}`)
     })
 })
 
@@ -46,6 +46,7 @@ router.get('/:id', (req, res) => {
             })
         })
 })
+
 
 //delete
 router.delete('/:id', (req, res) => {
