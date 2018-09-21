@@ -11,6 +11,19 @@ router.get('/', (req, res) => {
     })
 })
 
+//new guitarist
+router.get('/new', (req, res) => {
+  res.render('guitarists/new')
+})
+
+//create
+router.post('/', (req, res) => {
+  Guitarist.create(req.body)
+    .then((guitarist) => {
+      res.redirect(`/guitarists/${guitarist.id}/songs`)
+    })
+})
+
 //show one guitarist show all songs
 router.get('/:guitaristId/songs', (req, res) => {
   Guitarist.findById(req.params.guitaristId)
@@ -22,10 +35,8 @@ router.get('/:guitaristId/songs', (req, res) => {
   })
 })
 
-//new guitarist
-router.get('/new', (req, res) => {
-  res.render('guitarists/new')
-})
+
+
 
 //delete
 router.delete('/:guitaristId', (req ,res) => {
@@ -35,12 +46,6 @@ router.delete('/:guitaristId', (req ,res) => {
   })
 })
 
-//create
-router.post('/', (req, res) => {
-  Guitarist.create(req.body)
-    .then((guitarist) => {
-      res.redirect(`/guitarists/${guitarist.id}`)
-    })
-})
+
 
 module.exports = router;
