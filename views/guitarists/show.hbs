@@ -2,22 +2,22 @@
 <div><a class="links" href="/guitarists/">Home</a></div>
 
 <div class="guitarist_info">
-    <img  src="{{guitarist.img}}">
+    <img class="guitarist-show-image" src="{{guitarist.img}}">
     <div class="hello">
         <div class="info">Band</div><div>{{guitarist.band}}</div>
         <br>
         <div class="info">Bio</div><div>{{guitarist.bio}}</div>
         <br>
         <form action="/guitarists/{{guitarist._id}}?_method=DELETE" method="POST">
-            <input class="ui inverted basic button" type="submit" value="delete user">
+            <input class="ui inverted basic button" type="submit" value="Delete Guitarist">
             <a class="ui inverted basic button" href="/guitarists/{{guitarist._id}}/edit">Edit Guitarist</a>
         </form>
         <br>
         <div class="info">Songs</div>
         {{#each songs}}
-        <div><a class="links"href="/guitarists/{{../guitarist._id}}/songs/{{this._id}}">{{this.name}}</a></div>
+        <div><a class="links" href="/guitarists/{{../guitarist._id}}/songs/{{this._id}}">{{this.name}}</a></div>
         <form action="/guitarists/{{../guitarist._id}}/songs/{{this._id}}?_method=DELETE" method="POST">
-        <input class="ui inverted button type="submit" value="delete song">
+        <input class="ui inverted basic button" type="submit" value="delete song">
         </form>
         {{/each}}
         <a href="/guitarists/{{guitarist._id}}/songs/new"> Add New Song</a>
