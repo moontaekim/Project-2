@@ -1,8 +1,43 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #636363;
+  color: white;
+
 }
 
-a {
-  color: #00B7FF;
+.mainHeader {
+  text-align: center;
+  font-family: 'Monoton';
+  font-size: 125px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.new-guitarist {
+font-size: 40px;
+text-align: center;
+padding-bottom: 30px;
+}
+
+a:hover {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+
+
+img {
+  height: 200px;
+  max-width: 100%;
+}
+img:hover {
+  opacity: 0.7;
+}
+
+.all-guitarist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
