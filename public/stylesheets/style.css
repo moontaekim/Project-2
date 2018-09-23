@@ -60,6 +60,10 @@ img:hover {
   padding-bottom: 5px;
 }
 
+.guitarist-show-image {
+  max-width: 920px;
+  max-height: 590px
+}
 
 
 
@@ -74,4 +78,13 @@ img:hover {
 @media (max-width: 1020px) {
   .mainHeader { 
     font-size: 75px;
+}
+  .guitarist-show-image {
+    max-width: 460px;
+    max-height: 295px
+}
+.guitarist_info {
+  display: flex;
+  flex-wrap: wrap;
+}
 }
