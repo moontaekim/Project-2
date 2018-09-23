@@ -1,13 +1,30 @@
-<h1>Edit {{guitarist.name}}'s info</h1>
+<h1 class="mainHeader">Edit Guitarist's info</h1>
 
-<form action="/guitarists/{{guitarist._id}}?_method=PUT" method="POST">
-    <div>Name: <input type="text" name="name" value="{{guitarist.name}}"></div>
-    <div>Band: <input type="text" name="band" value="{{guitarist.band}}"></div>
-    <div>Bio: <input type="text" name="bio" value="{{guitarist.bio}}"></div>
-    <div>Image Url: <input type="text" name="img" value="{{guitarist.img}}"></div>
-    <div><input type='submit' value='Update Guitarist'></div>
+
+
+
+
+
+<div class ="form">
+<form class="ui form sizing" action="/guitarists/{{guitarist._id}}?_method=PUT" method="POST">
+    <div class="field">
+        <label>Name</label>
+        <input type="text" name="name" value="{{guitarist.name}}">
+    </div>
+    <div class="field">
+        <label>Band</label>
+        <input type="text" name="band" value="{{guitarist.band}}">
+    </div>
+        <div class="field">
+        <label>Bio</label>
+        <input type="text" name="bio" value="{{guitarist.bio}}"></input>
+    </div>
+        <div class="field">
+        <label>Image</label>
+        <input type="text" name="img" value="{{guitarist.img}}">
+    </div>
+  
+    <button class="ui inverted basic button" type="submit">Update Guitarist</button>
+    
 </form>
-
-
-
-
+</div>
