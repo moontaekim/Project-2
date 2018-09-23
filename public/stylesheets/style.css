@@ -10,6 +10,14 @@
   font-size: 125px;
   font-weight: 100;
   margin: 0;
+  background: black
+}
+
+a.links {
+  color: white;
+}
+a.links:hover {
+  color: black
 }
 
 .new-guitarist {
@@ -18,15 +26,9 @@ text-align: center;
 padding-bottom: 30px;
 }
 
-.new-guitarist:hover {
-  color: white
-}
-
 img {
-  height: 200px;
-  max-width: 100%;
   padding:1px;
-  border:1px solid white;
+
  }
 img:hover {
   opacity: 0.7;
@@ -41,19 +43,26 @@ img:hover {
 
 .guitarist-name {
   font-size: 25px;
-  text-align: center
+  text-align: center;
 }
 
 .show_name {
   font-family: 'Monoton';
   font-weight: 50;
-  font-size: 50px
+  font-size: 50px;
+  background: black
 }
 
 .guitarist_info {
   display: flex;
   flex-direction: row;
-  
+}
+
+.info {
+  font-size: 25px;
+  text-decoration: underline;
+  letter-spacing: 3px;
+  padding-bottom: 5px;
 }
 
 .hello {
@@ -62,6 +71,17 @@ img:hover {
   max-width: 600px;
 }
 
-.info {
-  font-size: 25px;
+
+
+.ui.form.sizing {
+  max-width: 75%;
+}
+
+.form {
+  margin: auto;
+}
+
+@media (max-width: 1020px) {
+  .mainHeader { 
+    font-size: 75px;
 }
