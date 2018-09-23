@@ -1,4 +1,8 @@
-<div><a href="/guitarists/{{guitarist._id}}">Go Back</a></div>
+<div class="ui breadcrumb">
+    <a class="active section" href="/guitarists">Home</a>
+    <div class="divider"> / </div>
+    <a class="section" href="/guitarists/{{guitarist._id}}">Back to Artist</a>
+</div>
 
 <h1 class="show_name">{{song.name}}</h1>
 
@@ -17,9 +21,8 @@
    <div>{{this.name}}</div>
    <div><a href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}">click</a></div>
     <form action="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}?_method=DELETE" method="POST">
-        <input type="submit" value="delete gear">
+        <input class="ui inverted button type="submit" value="delete gear">
     </form>
     {{/each}}
     <a href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/gears/new">Add New Gear</a>
-
 </div>

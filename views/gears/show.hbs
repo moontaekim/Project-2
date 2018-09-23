@@ -1,5 +1,11 @@
 <h1>Gear Details</h1>
-<div><a href="/guitarists/{{guitarist._id}}/songs/{{song._id}}">Go Back</a></div>
+<div class="ui breadcrumb">
+    <a class="active section" href="/guitarists">Home</a>
+    <div class="divider"> / </div>
+    <a class="section" href="/guitarists/{{guitarist._id}}">Back to Artist</a>
+    <div class="divider"> / </div>
+    <a href="/guitarists/{{guitarist._id}}/songs/{{song._id}}">Back to Song</a>
+</div>
 
 <div>Name: {{gear.name}}</div>
 <div>Brand: {{gear.brand}}</div>

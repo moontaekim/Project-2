@@ -1,12 +1,12 @@
 <h1 class="mainHeader">Gear Doctor</h1>
-<div class="new-guitarist"><a class="animated pulse" href="/guitarists/new">new guitarist</a></div>
+<div class="new-guitarist"><a class="links" href="/guitarists/new">new guitarist</a></div>
 
 <div class="all-guitarist">
     {{#each guitarist}}
 
     <div>
-        <img src="{{this.img}}">
-        <p class="guitarist-name"><a href="/guitarists/{{this._id}}">{{this.name}}</a></p>
+        <a href="/guitarists/{{this._id}}"><img class="ui medium circular image" src="{{this.img}}"></a>
+        <p class="guitarist-name">{{this.name}}</p>
     </div>
 
 
