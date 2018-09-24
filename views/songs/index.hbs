@@ -25,11 +25,11 @@
         <div>
             {{#each gears}}
             <div><a class="links" href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}">{{this.name}}</a></div>
-            <br>
             <form action="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}?_method=DELETE"
                 method="POST">
-                <input class="ui inverted basic button" type="submit" value="delete gear">
+                <input class="circular ui icon button" type="submit" value="delete gear">
             </form>
+            <br>
             {{/each}}
         </div>
     </div>
