@@ -55,7 +55,7 @@ img:hover {
 
 .guitarist_info {
   display: flex;
-}
+} 
 
 .info {
   font-size: 25px;
@@ -113,7 +113,7 @@ img:hover {
   height: 170px;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 800px) {
   .mainHeader {
     font-size: 75px;
   }
@@ -127,4 +127,5 @@ img:hover {
     max-width: 70vw;
   }
 }
+
 
