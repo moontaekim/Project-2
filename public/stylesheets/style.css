@@ -35,7 +35,6 @@ img:hover {
 
 .all-guitarist {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -124,10 +123,10 @@ img:hover {
   .guitarist_info {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
   }
 
   .guitarist-details {
     max-width: 70vw;
+    font-size: 15px;
   }
 }
