@@ -22,15 +22,18 @@
 
 
         <div class="info">Gears Used<a class="links" href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/gears/new">(+)</a></div>
-        <div>
+        
+        <ol class="song-list">
             {{#each gears}}
-            <div><a class="links" href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}">{{this.name}}</a></div>
+            <li><a class="links" href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}">{{this.name}}</a></li>
+            <br>
             <form action="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}?_method=DELETE"
                 method="POST">
                 <input class="circular ui icon button" type="submit" value="delete gear">
             </form>
             <br>
             {{/each}}
+        </ol>
         </div>
     </div>
 </div>

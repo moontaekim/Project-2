@@ -20,9 +20,11 @@
         <ol class="song-list">
             {{#each songs}}
             <li><a class="links" href="/guitarists/{{../guitarist._id}}/songs/{{this._id}}">{{this.name}}</a></li>
+            <br>
             <form action="/guitarists/{{../guitarist._id}}/songs/{{this._id}}?_method=DELETE" method="POST">
-                <input class="circular ui icon button" type="submit" value="delete">
+                <input class="circular ui icon button" type="submit" value="delete song">
             </form>
+            <br>
             {{/each}}
         </ol>
     </div>

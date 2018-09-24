@@ -16,7 +16,10 @@
 a.links {
   color: white;
   padding-left: 15px;
+}
 
+.delete {
+  padding-top: 10px;
 }
 
 a.links:hover {
