@@ -1,15 +1,20 @@
 <div class="ui breadcrumb">
-    <a class="active section" href="/guitarists">Home</a>
-    <div class="divider"> / </div>
-    <a class="section" href="/guitarists/{{guitarist._id}}">Back to Artist</a>
-    <div class="divider"> / </div>
-    <a href="/guitarists/{{guitarist._id}}/songs/{{song._id}}">Back to Song</a>
+    <a id="section" class="active section" href="/guitarists">Home</a>
+    <div id="section" class="divider"> / </div>
+    <a id="section" class="section" href="/guitarists/{{guitarist._id}}">Back to Artist</a>
+    <div id="section" class="divider"> / </div>
+    <a id="section" href="/guitarists/{{guitarist._id}}/songs/{{song._id}}">Back to Song</a>
 </div>
 
 <h1 class="show_name">Gear Details</h1>
 
 
-<div>Name: {{gear.name}}</div>
-<div>Brand: {{gear.brand}}</div>
-<div>Description: {{gear.description}}</div>
+<div class="info">Name</div>
+<div>{{gear.name}}</div>
+<br>
+<div class="info">Brand</div>
+<div>{{gear.brand}}</div>
+<br>
+<div class="info">Description</div>
+<div>{{gear.description}}</div>
 

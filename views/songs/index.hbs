@@ -1,28 +1,34 @@
 <div class="ui breadcrumb">
-    <a class="active section" href="/guitarists">Home</a>
-    <div class="divider"> / </div>
-    <a class="section" href="/guitarists/{{guitarist._id}}">Back to Artist</a>
+    <a id="section" class="active section" href="/guitarists">Home</a>
+    <div id="section" class="divider"> / </div>
+    <a id="section" class="section" href="/guitarists/{{guitarist._id}}">Back to Artist</a>
 </div>
 
 <h1 class="show_name">{{song.name}}</h1>
 
 <div>
     
-    <div>Album: {{song.album}}</div>
-    <div>Length: {{song.length}}</div>  
+    <div class="info">Album</div>
+    <div>{{song.album}}</div>
+    <br>
+    <div class="info">Length</div>
+    <div>{{song.length}}</div>  
+    <br>
 
 </div>
- <div><a href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/edit">Edit Song</a></div>
+ <div><a class="ui inverted basic button" href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/edit">Edit Song</a></div>
+ <br>
+ 
 
 
-<h1>Gears Used</h1>
+<div class="info">Gears Used<a class="links" href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/gears/new">(+)</a></div>
 <div>
     {{#each gears}}
-   <div>{{this.name}}</div>
-   <div><a href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}">click</a></div>
+   <div><a class="links" href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}">{{this.name}}</a></div>
+   <br>
     <form action="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}?_method=DELETE" method="POST">
-        <input class="ui inverted button type="submit" value="delete gear">
+        <input class="ui inverted basic button" type="submit" value="delete gear">
     </form>
     {{/each}}
-    <a href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/gears/new">Add New Gear</a>
+    
 </div>

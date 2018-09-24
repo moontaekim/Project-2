@@ -62,7 +62,16 @@ img:hover {
 
 .guitarist-show-image {
   max-width: 920px;
-  max-height: 590px
+  max-height: 590px;
+  padding-right: 10px
+
+}
+
+#section {
+  color: white
+}
+#section:hover {
+  color: black
 }
 
 
@@ -87,4 +96,11 @@ img:hover {
   display: flex;
   flex-wrap: wrap;
 }
+}
+
+.song-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 170px;
 }
