@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
         return guitarist.save()
     })
     .then(guitarist => {
-        res.redirect(`/guitarists/${guitarist._id}`)
+        res.redirect(`/guitarists/${guitarist._id}/songs/${newSong._id}`)
     })
 })
 

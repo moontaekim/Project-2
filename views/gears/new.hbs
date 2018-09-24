@@ -1,8 +1,26 @@
-<h1>New Gear</h1>
+<h1 class="mainHeader">New Gear</h1>
 
-<form action='/guitarists/{{guitarist._id}}/songs/{{song._id}}/gears' method="POST">
-    <div>Name: <input type="text" name="name"></div>
-    <div>Brand: <input type="text" name="brand"></div>
-    <div>Description: <input type="text" name="description"></div>
-    <div><input type="submit" value="Add New Gear"></div>
-</form>
+
+<div class="form">
+    <form class="ui form sizing" action='/guitarists/{{guitarist._id}}/songs/{{song._id}}/gears' method="POST">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="name">
+        </div>
+        <div class="field">
+            <label>Brand</label>
+            <input type="text" name="brand">
+        </div>
+        <div class="field">
+            <label>Description</label>
+            <input type="text" name="description">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="img" placeholder="Add Image URL">
+        </div>
+
+        <button class="ui button" type="submit">Add New Gear</button>
+
+    </form>
+</div>
