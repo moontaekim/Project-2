@@ -5,13 +5,15 @@ const Schema = mongoose.Schema
 const GearSchema = new Schema({
     name: String,
     brand: String,
-    description: String
+    description: String,
+    img: String
 })
 
 const SongSchema = new Schema({
     name: String,
     album: String,
     length: String,
+    img: String,
     gears: [GearSchema]
 })
 

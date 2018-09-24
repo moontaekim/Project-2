@@ -1,8 +1,25 @@
 <h1>Edit {{song.name}}'s info</h1>
 
-<form action="/guitarists/{{guitarist._id}}/songs/{{song._id}}?_method=PUT" method="POST">
-    <div>Name: <input type="text" name="name" value="{{song.name}}"></div>
-    <div>Album: <input type="text" name="album" value="{{song.album}}"></div>
-    <div>Length: <input type="text" name="length" value="{{song.length}}"></div>
-    <div><input type='submit' value='Update Song'></div>
+<div class ="form">
+<form class="ui form sizing" action="/guitarists/{{guitarist._id}}/songs/{{song._id}}?_method=PUT" method="POST">
+    <div class="field">
+        <label>Name</label>
+        <input type="text" name="name" value="{{song.name}}">
+    </div>
+    <div class="field">
+        <label>Album</label>
+        <input type="text" name="album" value="{{song.album}}">
+    </div>
+        <div class="field">
+        <label>Length</label>
+        <input type="text" name="length" value="{{song.length}}"></input>
+    </div>
+        <div class="field">
+        <label>Image</label>
+        <input type="text" name="img" value="{{song.img}}">
+    </div>
+  
+    <button class="ui inverted basic button" type="submit">Update Song</button>
+    
 </form>
+</div>

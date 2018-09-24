@@ -6,30 +6,30 @@
 
 <h1 class="show_name">{{song.name}}</h1>
 
-<div>
+<div class="guitarist_info">
     <img class="guitarist-show-image" src="{{song.img}}">
+    <div class="guitarist-details">
+        <div class="info">Album</div>
+        <div>{{song.album}}</div>
+        <br>
+        <div class="info">Length</div>
+        <div>{{song.length}}</div>
+        <br>
 
-    <div class="info">Album</div>
-    <div>{{song.album}}</div>
-    <br>
-    <div class="info">Length</div>
-    <div>{{song.length}}</div>  
-    <br>
-
-</div>
- <div><a class="ui inverted basic button" href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/edit">Edit Song</a></div>
- <br>
- 
+        <div><a class="ui inverted basic button" href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/edit">Edit Song</a></div>
+        <br>
 
 
-<div class="info">Gears Used<a class="links" href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/gears/new">(+)</a></div>
-<div>
-    {{#each gears}}
-   <div><a class="links" href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}">{{this.name}}</a></div>
-   <br>
-    <form action="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}?_method=DELETE" method="POST">
-        <input class="ui inverted basic button" type="submit" value="delete gear">
-    </form>
-    {{/each}}
-    
-</div>
+
+        <div class="info">Gears Used<a class="links" href="/guitarists/{{guitarist._id}}/songs/{{song._id}}/gears/new">(+)</a></div>
+        <div>
+            {{#each gears}}
+            <div><a class="links" href="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}">{{this.name}}</a></div>
+            <br>
+            <form action="/guitarists/{{../guitarist._id}}/songs/{{../song._id}}/gears/{{this._id}}?_method=DELETE"
+                method="POST">
+                <input class="ui inverted basic button" type="submit" value="delete gear">
+            </form>
+            {{/each}}
+        </div>
+    </div>

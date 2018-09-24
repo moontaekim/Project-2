@@ -13,26 +13,30 @@ const { Guitarist, Song, Gear } = Schema
 const gearJGG1 = new Gear({
     name: "BD1",
     brand: "BOSS",
-    description: "distortion pedal"
+    description: "distortion pedal",
+    img: "123"
 })
 
 const gearJGG2 = new Gear({
     name: "Hall of Fame",
     brand: "TC electronic",
-    description: "Reverb pedal"
+    description: "Reverb pedal",
+    img: "123"
 })
 
 //gears Jack White
 const gearJWG1 = new Gear({
     name: "Bumble Buzz",
     brand: "Union Tube & Third Man Records",
-    description: "Fuzz pedal"
+    description: "Fuzz pedal",
+    img: "123"
 })
 
 const gearJWG2 = new Gear({
     name: "Whammy Pitch-Shifting",
     brand: "DigiTech",
-    description: "pitch shifter"
+    description: "pitch shifter",
+    img: "123"
 })
 
 
