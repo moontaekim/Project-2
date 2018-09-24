@@ -125,6 +125,7 @@ img:hover {
   .guitarist_info {
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
   }
 
   .guitarist-details {
