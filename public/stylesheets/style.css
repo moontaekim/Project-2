@@ -1,5 +1,5 @@
 .body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: #636363;
   color: white;
 }
@@ -53,9 +53,6 @@ img:hover {
   padding-left: 5px;
 }
 
-.guitarist_info {
-  display: flex;
-} 
 
 .info {
   font-size: 25px;
@@ -86,7 +83,7 @@ img:hover {
   padding-left: 5px;
 }
 
-  .guitarist-details {
+.guitarist-details {
     max-width: 450px;
   }
 
@@ -113,6 +110,10 @@ img:hover {
   height: 170px;
 }
 
+.guitarist_info {
+  display: flex
+}
+
 @media (max-width: 800px) {
   .mainHeader {
     font-size: 75px;
@@ -121,11 +122,13 @@ img:hover {
   .guitarist_info {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
   }
 
   .guitarist-details {
     max-width: 70vw;
   }
 }
+
 
 
