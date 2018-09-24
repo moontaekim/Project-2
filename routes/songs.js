@@ -52,9 +52,7 @@ router.get('/:songId', (req, res) => {
                 song,
                 gears: song.gears
             })
-            $('.ui.modal')
-  .modal('show')
-;
+
         })
 })
 

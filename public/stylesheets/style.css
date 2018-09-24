@@ -16,16 +16,17 @@
 a.links {
   color: white;
   padding-left: 5px;
-  
+
 }
+
 a.links:hover {
   color: black
 }
 
 .new-guitarist {
-font-size: 40px;
-text-align: center;
-padding-bottom: 30px;
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 img:hover {
@@ -64,21 +65,27 @@ img:hover {
 }
 
 .guitarist-show-image {
-  max-width: 920px;
-  max-height: 590px;
+  width: 70vw;
+  height: 45vw;
+  max-width: 935px;
+  max-height: 600px;
+  min-width: 320px;
+  min-height: 200px;
   padding-right: 10px;
   padding-left: 5px;
-
 }
+
+  .guitarist-details {
+    max-width: 450px;
+  }
 
 #section {
   color: white
 }
+
 #section:hover {
   color: black
 }
-
-
 
 .ui.form.sizing {
   max-width: 75%;
@@ -88,23 +95,25 @@ img:hover {
   margin: auto;
 }
 
-@media (max-width: 1020px) {
-  .mainHeader { 
-    font-size: 75px;
-}
-  .guitarist-show-image {
-    max-width: 460px;
-    max-height: 295px
-}
-.guitarist_info {
-  display: flex;
-  flex-wrap: wrap;
-}
-}
-
 .song-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   height: 170px;
 }
+
+@media (max-width: 1020px) {
+  .mainHeader {
+    font-size: 75px;
+  }
+
+  .guitarist_info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .guitarist-details {
+    max-width: 70vw;
+  }
+}
+
