@@ -10,11 +10,13 @@
   font-size: 125px;
   font-weight: 100;
   margin: 0;
-  background: black
+  background: black;
 }
 
 a.links {
   color: white;
+  padding-left: 5px;
+  
 }
 a.links:hover {
   color: black
@@ -46,7 +48,8 @@ img:hover {
   font-family: 'Monoton';
   font-weight: 50;
   font-size: 50px;
-  background: black
+  background: black;
+  padding-left: 5px;
 }
 
 .guitarist_info {
@@ -63,7 +66,8 @@ img:hover {
 .guitarist-show-image {
   max-width: 920px;
   max-height: 590px;
-  padding-right: 10px
+  padding-right: 10px;
+  padding-left: 5px;
 
 }
 
