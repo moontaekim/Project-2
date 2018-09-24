@@ -53,7 +53,6 @@ img:hover {
   padding-left: 5px;
 }
 
-
 .info {
   font-size: 25px;
   text-decoration: underline;
@@ -84,8 +83,8 @@ img:hover {
 }
 
 .guitarist-details {
-    max-width: 450px;
-  }
+  max-width: 450px;
+}
 
 #section {
   color: white
@@ -114,6 +113,9 @@ img:hover {
   display: flex
 }
 
+.gears {
+  width:60vw; 
+}
 @media (max-width: 800px) {
   .mainHeader {
     font-size: 75px;
@@ -129,6 +131,3 @@ img:hover {
     max-width: 70vw;
   }
 }
-
-
-
