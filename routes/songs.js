@@ -63,6 +63,7 @@ router.put('/:songId', (req, res) => {
         song.name = req.body.name
         song.album = req.body.album
         song.length = req.body.length
+        song.img = req.body.img
         return guitarist.save()
     })
     .then(guitarist => {
