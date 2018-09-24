@@ -15,7 +15,7 @@
 
 a.links {
   color: white;
-  padding-left: 5px;
+  padding-left: 15px;
 
 }
 
@@ -116,6 +116,7 @@ img:hover {
 
 .gears {
   width:60vw; 
+  padding-left: 5px
 }
 @media (max-width: 800px) {
   .mainHeader {
@@ -125,7 +126,6 @@ img:hover {
   .guitarist_info {
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
   }
 
   .guitarist-details {
