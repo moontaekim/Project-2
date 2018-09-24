@@ -67,7 +67,7 @@ img:hover {
   min-width: 320px;
   min-height: 200px;
   padding-right: 10px;
-  padding-left: 5px;
+  padding-left: 15px;
 }
 
 .song-show-image {
@@ -83,6 +83,8 @@ img:hover {
 
 .guitarist-details {
   max-width: 450px;
+  padding-left: 15px;
+
 }
 
 #section {
