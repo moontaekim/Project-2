@@ -41,7 +41,7 @@ const jgS1 = new Song({
     name: "Bodysnatchers",
     album: "In Rainbows",
     length: "4:02",
-    ing: "https://images-na.ssl-images-amazon.com/images/I/81KWYrlOt7L._SL1254_.jpg";
+    img: "https://images-na.ssl-images-amazon.com/images/I/81KWYrlOt7L._SL1254_.jpg",
     gears: [gearJGG1, gearJGG2]
 })
 
@@ -49,7 +49,7 @@ const jgS2 = new Song({
     name: "My Iron Lung",
     album: "The Bends",
     length: "4:36",
-    img: "https://img.discogs.com/FoMkECc8r9AGFA3Dx2zTJp81qRw=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-368116-1460271933-7901.jpeg.jpg";
+    img: "https://img.discogs.com/FoMkECc8r9AGFA3Dx2zTJp81qRw=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-368116-1460271933-7901.jpeg.jpg",
     gears: [gearJGG1, gearJGG2]
 })
 //songs for Jack White
@@ -57,7 +57,7 @@ const jwS1 = new Song({
     name: "Sisteen Saltines",
     album: "Blunderbuss",
     length: "2:37",
-    img: "https://img.discogs.com/qtkYHqSh5nfSKywKOx7a-di2_HE=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3545659-1357657373-7082.jpeg.jpg";
+    img: "https://img.discogs.com/qtkYHqSh5nfSKywKOx7a-di2_HE=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3545659-1357657373-7082.jpeg.jpg",
     gears: [gearJWG1, gearJWG2]
 })
 
@@ -65,7 +65,7 @@ const jwS2 = new Song({
     name: "Over and Over and Over",
     album: "Boarding House Reach",
     length: "3:36",
-    img: "https://images-na.ssl-images-amazon.com/images/I/817BNj8fOCL._SL1500_.jpg";
+    img: "https://images-na.ssl-images-amazon.com/images/I/817BNj8fOCL._SL1500_.jpg",
     gears: [gearJWG1, gearJWG2]
 })
 
