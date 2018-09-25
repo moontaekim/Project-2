@@ -19,6 +19,10 @@ https://murmuring-hamlet-79842.herokuapp.com/guitarists
 
 https://trello.com/b/FJCkadPA/project-2
 
+## GitHub
+
+https://github.com/moontaekim/Project-2
+
 ## Tech Used
 1. HTML
 2. CSS
