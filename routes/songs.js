@@ -61,10 +61,7 @@ router.put('/:songId', (req, res) => {
     Guitarist.findById(req.params.guitaristId)
     .then(guitarist => {
         const song = guitarist.songs.id(req.params.songId)
-        song.name = req.body.name
-        song.album = req.body.album
-        song.length = req.body.length
-        song.img = req.body.img
+        song.set(req.body)
         return guitarist.save()
     })
     .then(guitarist => {
